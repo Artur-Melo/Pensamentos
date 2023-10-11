@@ -17,7 +17,7 @@ module.exports = {
   async findUsers(request,response){
     const users = await User.findAll({ raw: true});
 
-    return response.json(users);
+    return response.render("users");
   },
   async findUser(request,response){
     const { id } = request.params;
@@ -27,7 +27,28 @@ module.exports = {
   },
 
 async update(request,response) {
-  const { id } = request.params
+  const { id } = request.params;
+  const { name, email, password, confirm_password } = request.body;
+
+  const user = await User.update(
+    {
+      name,
+      email,
+      password,
+      confirm_password,
+    },
+    {
+      where: { id }
+    }
+  );
+
+  return response.json({ "mensagem": "User updated!" });
+},
+async deleteUser(request, response) {
+  const { id } = request.params;
+  const user = await User.destroy({ where: { id }});
+
+  return response.json({"menssage": "User deleted!" })
 }
   
 };
