@@ -3,7 +3,7 @@ module.exports = {
   host: 'localhost',
   username: 'aluno_medio',
   password: '@lunoSenai23.',
-  database: 'thoughts_system',
+  database: 'pensamentos',
   define: {
     timestamps: true,
     underscored: true,

@@ -17,7 +17,9 @@ module.exports = {
   async findUsers(request,response){
     const users = await User.findAll({ raw: true});
 
-    return response.render("users");
+    // return response.render("users");
+    return response.json(users);
+
   },
   async findUser(request,response){
     const { id } = request.params;
