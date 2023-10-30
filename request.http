@@ -1,11 +1,11 @@
-GET http://localhost:3030/users/1
-
-###
-
-POST http://localhost:3030/thoughts
+POST http://localhost:3333/users
 Content-Type: application/json
 
 {
-    "title": "Pensamento 01",
-    "description": "Pensamento do dia"
+    "name": "Lara",
+    "email": "lara@gmail.com",
+    "password": "1234ab",
+    "confirm_password": "1234ab"
 }
+
+PUT http://localhost:3333/users/1

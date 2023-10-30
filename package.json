@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --watch src/server.js"
   },
   "keywords": [],
@@ -16,10 +17,15 @@
     "sequelize": "^6.33.0"
   },
   "devDependencies": {
-    "eslint": "^8.50.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.28.1",
     "sequelize-cli": "^6.6.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eliassx/pensamentos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Eliassx/pensamentos/issues"
+  },
+  "homepage": "https://github.com/Eliassx/pensamentos#readme",
   "description": ""
 }

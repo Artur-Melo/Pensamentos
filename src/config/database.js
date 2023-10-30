@@ -6,6 +6,6 @@ module.exports = {
   database: 'pensamentos',
   define: {
     timestamps: true,
-    underscored: true,
-  },
+    underscored: true
+  }
 };
